@@ -1,0 +1,42 @@
+### Get all tuits
+
+GET {{host}}/tuits
+
+### Get all tuits with offset and limit
+
+GET http://localhost:3000/tuits?limit=1&offset=2
+
+### Get one tuit by id
+
+GET http://localhost:3000/tuits/1
+
+### Create tuit
+
+POST http://localhost:3000/tuits
+Content-Type: application/json
+
+{
+  "message": "New Tuit",
+  "user": {
+    "name": "Marluan",
+    "username": "marluan",
+    "email": "marluan@test.com",
+    "password": "my-weak-password"
+  }
+}
+
+### Update tuit
+
+PATCH http://localhost:3000/tuits/1
+Content-Type: application/json
+
+{
+  "message": "Tuit updated"
+}
+
+### Delete tuit
+
+DELETE http://localhost:3000/tuits/1
+Content-Type: application/json
+
+###
